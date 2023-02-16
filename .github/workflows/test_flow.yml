@@ -8,4 +8,4 @@ jobs:
       CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
 
   analysis:
-    uses: surfstudio/flutter-ci-workflows/.github/workflows/analysis.yml
+    uses: surfstudio/flutter-ci-workflows/.github/workflows/analysis.yml@main
