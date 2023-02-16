@@ -21,5 +21,4 @@ class InfoScreenWidgetModel extends WidgetModel<InfoScreen, InfoScreenModel>
 }
 
 /// Interface of [InfoScreenWidgetModel].
-abstract class IInfoScreenWidgetModel extends IWidgetModel
-    with ThemeIModelMixin {}
+abstract class IInfoScreenWidgetModel extends IWidgetModel with ThemeIModelMixin {}

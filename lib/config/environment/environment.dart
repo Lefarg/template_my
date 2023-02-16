@@ -30,8 +30,7 @@ class Environment<T> implements Listenable {
 
   ValueNotifier<T> _config;
 
-  Environment._(this._currentBuildType, T config)
-      : _config = ValueNotifier<T>(config);
+  Environment._(this._currentBuildType, T config) : _config = ValueNotifier<T>(config);
 
   /// Provides instance [Environment].
   factory Environment.instance() => _instance as Environment<T>;
