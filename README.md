@@ -171,3 +171,4 @@ If a functionality needs some dependencies specific to it only, they are isolate
 
 Example
 Description
+Installation
