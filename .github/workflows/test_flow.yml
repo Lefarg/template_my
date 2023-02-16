@@ -6,3 +6,5 @@ jobs:
     uses: surfstudio/flutter-ci-workflows/.github/workflows/analysis.yml@main
   check_issues:
     uses: surfstudio/flutter-ci-workflows/.github/workflows/check_issues.yaml@main
+    with:
+      REPO_PATH: "sss"
