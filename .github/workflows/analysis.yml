@@ -25,14 +25,15 @@ jobs:
         if: steps.check_files.outputs.files_exists == 'true'
         run: echo Content is ok!
 
-      - name: Check Description
-        run: echo | grep -q Description README.md ; echo $?
+      # Проверка на наличие соответствующих разделов в README.md
+      # - name: Check Description
+      # run: echo | grep -q Description README.md ; echo $?
 
-      - name: Check Example
-        run: echo | grep -q Example README.md ; echo $?
+      # - name: Check Example
+      # run: echo | grep -q Example README.md ; echo $?
 
-      - name: Check Installation
-        run: echo | grep -q Installation README.md ; echo $?
+      # - name: Check Installation
+      # run: echo | grep -q Installation README.md ; echo $?
 
       - name: Install dependencies
         run: flutter pub get
