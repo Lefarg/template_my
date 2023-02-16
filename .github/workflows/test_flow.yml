@@ -1,0 +1,6 @@
+name: TESTFLOW
+on: push
+
+jobs:
+  test_job:
+    uses: surfstudio/flutter-ci-workflows/.github/workflows/analysis.yml@main
