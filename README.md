@@ -168,3 +168,7 @@ If a functionality needs some dependencies specific to it only, they are isolate
 ### Implementation examples
 
 [An example](https://github.com/surfstudio/surf-flutter-app-template-example) of using the template in navigation
+
+Example
+Description
+Installation
