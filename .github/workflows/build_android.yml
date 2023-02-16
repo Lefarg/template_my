@@ -1,4 +1,4 @@
-name: "Build android example"
+name: "Build android"
 
 on: push
 
