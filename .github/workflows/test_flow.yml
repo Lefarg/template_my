@@ -1,6 +1,10 @@
-name: TESTFLOW
+name: check_flow
 on: push
 
 jobs:
-  test_job:
+  analysis:
     uses: surfstudio/flutter-ci-workflows/.github/workflows/analysis.yml@main
+  build_android_example:
+    uses: surfstudio/flutter-ci-workflows/.github/workflows/build_android_example.yml
+  build_ios_example:
+    uses: surfstudio/flutter-ci-workflows/.github/workflows/build_ios_example.yml
