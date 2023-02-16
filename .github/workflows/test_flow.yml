@@ -4,7 +4,5 @@ on: push
 jobs:
   analysis:
     uses: surfstudio/flutter-ci-workflows/.github/workflows/analysis.yml@main
-  build_android_example:
-    uses: surfstudio/flutter-ci-workflows/.github/workflows/build_android_example.yml
-  build_ios_example:
-    uses: surfstudio/flutter-ci-workflows/.github/workflows/build_ios_example.yml
+  check_issues:
+    uses: surfstudio/flutter-ci-workflows/.github/workflows/check_issues.yaml@main
