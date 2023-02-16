@@ -3,7 +3,7 @@ name: "Build ios"
 on: push
 
 jobs:
-  build_ios_example:
+  build_ios:
     runs-on: macos-latest
 
     steps:
@@ -21,5 +21,7 @@ jobs:
 
       - name: Build iOS
         run: |
+          flutter pub run build_runner build --delete-conflicting-outputs
+          flutter clean
           flutter pub get
           flutter build ios --release --no-codesign

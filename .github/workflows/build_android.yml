@@ -3,7 +3,7 @@ name: "Build android"
 on: push
 
 jobs:
-  build_android_example:
+  build_android:
     runs-on: ubuntu-latest
 
     steps:
