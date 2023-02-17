@@ -2,7 +2,7 @@
 # Установка лейбла из готового файла
 
 name: "Pull request check"
-on: pull_request_review
+on: pull_request
 
 jobs:
   pull_request_check_template:
