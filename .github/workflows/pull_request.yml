@@ -2,7 +2,9 @@
 # Установка лейбла из готового файла
 
 name: "Pull request check"
-on: pull_request
+on:
+  pull_request:
+    types: [opened]
 
 jobs:
   pull_request_check_template:
@@ -11,8 +13,8 @@ jobs:
       pull-requests: write
     steps:
       - name: Check Related tasks
-        if: ${{ contains(github.event.pull_request.body, 'RRR') }}
+        if: ${{ !contains(github.event.pull_request.body, 'RRR') }}
         run: echo "RRR"
       - name: Check something
-        if: ${{ contains(github.event.pull_request.body, 'TTT') }}
+        if: ${{ !contains(github.event.pull_request.body, 'TTT') }}
         run: echo "TTT"
