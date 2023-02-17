@@ -12,6 +12,11 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+      - name: Assignee auto assign
+        uses: actions-ecosystem/action-add-assignees@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          assignees: ${{ github.actor }}
       - name: Check Related tasks
         if: ${{ !contains(github.event.pull_request.body, 'Related tasks') }}
         uses: actions/github-script@v3
@@ -30,8 +35,3 @@ jobs:
         with:
           script: |
             core.setFailed('No section Checklist for self-check!')
-      - name: Assignee auto assign
-        uses: actions-ecosystem/action-add-assignees@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          assignees: ${{ github.actor }}
