@@ -13,19 +13,19 @@ jobs:
       pull-requests: write
     steps:
       - name: Check Related tasks
-        if: ${{ contains(github.event.pull_request.body, 'Related tasks') }}
+        if: ${{ !contains(github.event.pull_request.body, 'Related tasks') }}
         uses: actions/github-script@v3
         with:
           script: |
             core.setFailed('No section Related tasks was found!')
       - name: Changes
-        if: ${{ contains(github.event.pull_request.body, 'Changes') }}
+        if: ${{ !contains(github.event.pull_request.body, 'Changes') }}
         uses: actions/github-script@v3
         with:
           script: |
             core.setFailed('No section Changes was found!')
       - name: Checklist for self-check
-        if: ${{ contains(github.event.pull_request.body, 'Checklist for self-check') }}
+        if: ${{ !contains(github.event.pull_request.body, 'Checklist for self-check') }}
         uses: actions/github-script@v3
         with:
           script: |
