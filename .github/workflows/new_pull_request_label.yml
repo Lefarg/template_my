@@ -3,7 +3,7 @@ name: "Pull-request label tracking"
 on:
   pull_request:
     types:
-      - opened
+      - review_requested
 
 jobs:
   label_pull_request:
