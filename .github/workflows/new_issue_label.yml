@@ -14,5 +14,6 @@ jobs:
       - name: Label issues
         uses: andymckay/labeler@master
         with:
+          # Просто добавляет плашку
           add-labels: "new issues"
           repo-token: ${{ secrets.SECRET_ISSUES }}
