@@ -13,8 +13,11 @@ jobs:
       pull-requests: write
     steps:
       - name: Check Related tasks
-        if: ${{ !contains(github.event.pull_request.body, 'RRR') }}
-        run: echo "RRR"
-      - name: Check something
-        if: ${{ !contains(github.event.pull_request.body, 'TTT') }}
-        run: echo "TTT"
+        if: ${{ contains(github.event.pull_request.body, 'Related tasks') }}
+        run: echo "Related tasks"
+      - name: Changes
+        if: ${{ contains(github.event.pull_request.body, 'Changes') }}
+        uses: actions/github-script@v3
+        with:
+          script: |
+            core.setFailed('No Changes find!')
