@@ -1,0 +1,17 @@
+# Проверка на соответствие шаблону при запросе ревью
+# Установка лейбла из готового файла
+
+name: "Pull request check"
+on: pull_request_review
+
+jobs:
+  pull_request_check_template:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Check Related tasks
+        uses: JJ/github-pr-contains-action@releases/v7
+        with:
+          github-token: ${{github.token}}
+          bodyContains: "RRESSR"
