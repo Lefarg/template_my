@@ -11,7 +11,8 @@ jobs:
       pull-requests: write
     steps:
       - name: Check Related tasks
-        env:
-          BODY: ${{ github.event.pull_request.body }}
-        run: |
-          echo "$BODY"
+        if: ${{ contains(github.event.pull_request.body, 'RRR') }}
+        run: echo "RRR"
+      - name: Check something
+        if: ${{ contains(github.event.pull_request.body, 'TTT') }}
+        run: echo "TTT"
