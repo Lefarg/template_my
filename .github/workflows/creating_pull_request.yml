@@ -14,10 +14,21 @@ jobs:
     steps:
       - name: Check Related tasks
         if: ${{ contains(github.event.pull_request.body, 'Related tasks') }}
-        run: echo "Related tasks"
+        uses: actions/github-script@v3
+        with:
+          script: |
+            core.setFailed('No section Related tasks was found!')
       - name: Changes
         if: ${{ contains(github.event.pull_request.body, 'Changes') }}
         uses: actions/github-script@v3
         with:
           script: |
-            core.setFailed('No Changes find!')
+            core.setFailed('No section Changes was found!')
+      - name: Checklist for self-check
+        if: ${{ contains(github.event.pull_request.body, 'Checklist for self-check') }}
+        uses: actions/github-script@v3
+        with:
+          script: |
+            core.setFailed('No section Checklist for self-check!')
+      - name: Assignee auto set
+        uses: augustohp/github-action-pr-assignee
