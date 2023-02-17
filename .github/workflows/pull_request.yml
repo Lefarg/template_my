@@ -13,3 +13,5 @@ jobs:
       - name: Check Related tasks
         env:
           BODY: ${{ github.event.pull_request.body }}
+        run: |
+          echo "$BODY"
