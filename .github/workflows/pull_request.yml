@@ -14,4 +14,4 @@ jobs:
         uses: JJ/github-pr-contains-action@releases/v7
         with:
           github-token: ${{github.token}}
-          bodyContains: "Related tasks | Changes | Checklist for self-check | Checklist for reviewers | "
+          bodyContains: "Related tasks | Changes | Checklist for self-check | Checklist for reviewers"
